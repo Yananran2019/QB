@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>线索信息采集</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/comm.css"/>
+    <link rel="stylesheet" href="../css/qbxsEditFill.css"/>
+</head>
+<body>
+<div class="container">
+        <!-- 小标题栏-->
+        <div class="my_title_info">
+            <p>报部信息</p>
+        </div>
+        <!-- 上报内容信息-->
+        <fieldset>
+            <legend>基本信息</legend>
+            <table cellpadding="15">
+                <tr>
+                    <td align="right" width="10%">线索标题:</td>
+                    <td width="90%">
+                            <input class="input-style" type="text" style="width:90%" id="BT" name="dataWrap.query.BT_LIKE" upload="true"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">信息正文:</td>
+                    <td width="90%">
+                        <textarea name="" id="" cols="30" rows="200" class="input-textarea_style"style="width:90%"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>人员群体信息</legend>
+            <div class="group_types">
+                <span style="width:10%">群体大类:</span>
+                <select name="group_big" id="big" style="width:30%">
+                    <option value=""></option>
+                </select>
+                <span style="width:10%;margin-left:10px;">群体细类:</span>
+                <select name="group_small" id="small" style="width:30%">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="ml-4 mb-1">
+                <button class="btn btn-info my_btn_width">关联</button>
+                <button class="btn btn-info my_btn_width">添加</button>
+                <button class="btn btn-info my_btn_width">查询</button>
+                <button class="btn btn-info my_btn_width">删除</button>
+            </div>
+            <div class="ml-4 mb-2">
+                <table class="table-bordered" style="width:80%">
+                    <tr>
+                        <td>姓名</td>
+                        <td>身份证号</td>
+                        <td>性别</td>
+                        <td>户籍</td>
+                        <td>居住地</td>
+                    </tr>
+                    <tr>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                    </tr>
+                </table>
+            </div>
+        </fieldset>
+    <fieldset>
+        <legend>线索标签</legend>
+        <table  cellpadding="15">
+            <tr>
+                <td align="right" width="10%" class="myPadding">信息类型:</td>
+                <td width="90%">
+                    <label for="action_cue"><input type="radio" name="info_type" value="action_cue" id="action_cue"/>行动性线索</label>
+                    <label for="zhyp"><input type="radio" name="info_type" value="zhyp" id="zhyp"/>综合研判</label>
+                    <label for="ztyg"><input type="radio" name="info_type" value="ztyg" id="ztyg"/>专题约稿</label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="10%" class="myPadding">信息来源:</td>
+                <td width="90%">
+                    <label for="hlwyq"><input type="radio" name="info_type" value="hlwyq" id="hlwyq"/>互联网舆情</label>
+                    <label for="jzsd"><input  type="radio" name="info_type" value="jzsd" id="jzsd"/>技侦手段</label>
+                    <label for="rcgz"><input  type="radio" name="info_type" value="rcgz" id="rcgz"/>日常工作</label>
+                    <label for="rlqb"><input  type="radio" name="info_type" value="rlqb" id="rlqb"/>人力情报</label>
+                </td>
+            </tr>
+            <!-- 表现形式-->
+            <tr>
+                <td align="right" width="10%" class="myPadding">表现形式:</td>
+                <td width="90%">
+                    <div class="input_marginR">
+                        <label for="jjf"><input type="checkbox" name="pattern" value="jjf" id="jjf"/>进京集访</label>
+                        <label for="jsf"><input type="checkbox" name="pattern" value="jsf" id="jsf"/>
+                        进京上访</label>
+                        <label for="sjf"><input type="checkbox" name="pattern" value="sjf" id="sjf"/>到省集访</label>
+                        <label for="sgf"><input type="checkbox" name="pattern" value="sgf" id="sgf"/>到省个访</label>
+                        <label for="jff"><input type="checkbox" name="pattern" value="jff" id="jff"/>进京非访</label>
+                        <label for="gtjd"><input type="checkbox" name="pattern" value="gtjd" id="gtjd"/>个体极端</label>
+                        <label for="ffjh"><input type="checkbox" name="pattern" value="ffjh" id="ffjh"/>非法集会</label>
+                        <label for="bg"><input type="checkbox" name="pattern" value="bg" id="bg"/>罢工</label>
+                        <label for="yxsw"><input type="checkbox" name="pattern" value="yxsw" id="yxsw"/>游行示威</label>
+                    </div>
+                </td>
+            </tr>
+            <!-- 涉事诱因-->
+            <tr>
+                <td align="right" width="10%" class="myPadding">涉事诱因:</td>
+                <td width="90%">
+                    <div class="input_marginR">
+                        <label for="mzzjmd"><input type="checkbox" name="involved_trigger" id="mzzjmd" value="mzzjmd" />民族宗教矛盾</label>
+                        <label for="ffzz"><input type="checkbox" name="involved_trigger" id="ffzz" value="ffzz"/>非法组织</label>
+                        <label for="zfsfwt"><input type="checkbox" name="involved_trigger" id="zfsfwt" value="zfsfwt" />执法司法问题</label>
+                        <label for="gyfb"><input type="checkbox" name="involved_trigger" id="gyfb" value="gyfb" />官员腐败</label>
+                        <label for="fldy"><input type="checkbox" name="involved_trigger" id="fldy" value="fldy" />福利待遇</label>
+                        <label for="lsyl"><input type="checkbox" name="involved_trigger" id="lsyl" value="lsyl" />历史遗留问题</label>
+                        <label for="jm"><input type="checkbox" name="involved_trigger" id="jm" value="jm" />移民问题</label>
+                        <label for="jywt"><input type="checkbox" name="involved_trigger" id="jywt" value="jywt"/>就业问题</label>
+                        <label for="hjwr"><input type="checkbox" name="involved_trigger" id="hjwr" value="hjwr"/>环境污染</label>
+                        <label for="zdbq"><input type="checkbox" name="involved_trigger" id="zdbq" value="zdbq"/>征地搬迁</label>
+                        <label for="jfwt"><input type="checkbox" name="involved_trigger" id="jfwt" value="jfwt"/>纠纷问题</label>
+                        <label for="zqqhwt"><input type="checkbox" name="involved_trigger" id="zqqhwt" value="zqqhwt"/>证券期货问题</label>
+                        <label for="qygzpcjb"><input type="checkbox" name="involved_trigger" id="qygzpcjb" value="qygzpcjb"/>企业改制破产兼并</label>
+                        <label for="qt"><input type="checkbox" name="involved_trigger" id="qt" value="qt"/>其它</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="10%" class="myPadding">涉事类型:</td>
+                <td width="90%">
+                    <div class="input_marginR">
+                        <label for="zzsj"><input type="radio" name="involved_type" value="zzsj" id="zzsj"/>政治事件</label>
+                        <label for="blkbsj"><input type="radio" name="involved_type" value="blkbsj" id="blkbsj"/>暴力恐怖事件</label>
+                        <label for="qtxsj"><input type="radio" name="involved_type" value="qtxsj" id="qtxsj"/>群体性事件</label>
+                        <label for="zhxsj"><input type="radio" name="involved_type" value="zhxsj" id="zhxsj"/>综合性事件</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="10%" class="myPadding">省内外:</td>
+                <td width="90%">
+                    <div class="input_marginR">
+                        <label for="sn"><input type="radio" name="province_in_out" value="sn" id="sn"/>省内</label>
+                        <label for="sw"><input type="radio" name="province_in_out" id="sw" value="sw"/>省外</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="10%">涉事地点:</td>
+                <td width="90%">
+                    <input class="input-style" type="text" style="width:85%" name=""/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="10%">上传附件:</td>
+                <td width="90%">
+                    <input type="file" style="width:90%" name=""/>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <!-- 上报人信息-->
+    <fieldset>
+        <legend>上报人信息</legend>
+            <div class="group_types">
+                <span style="width:10%" class="mx-2">上&nbsp;报&nbsp;人:</span>
+                <input class="input-style ml-1" type="text" style="width:30%"/>
+                <span style="width:10%;margin-left:2rem">联系方式:</span>
+                <input class="input-style" type="text" style="width:30%"/>
+            </div>
+            <div class="group_types my-3">
+                <span style="width:10%" class="mx-2">上报单位:</span>
+                <input class="input-style" type="text" style="width:30%"/>
+                <span style="width:10%;margin-left:2rem">上报时间:</span>
+                <input class="input-style" type="text" style="width:30%"/>
+            </div>
+    </fieldset>
+    <!--上报暂存按钮 -->
+    <div class="my-3 text-center">
+        <button class="btn btn-info my_btn_width">上报</button>
+        <button class="btn btn-info my_btn_width">暂存</button>
+    </div>
+    </div>
+</body>
+</html>

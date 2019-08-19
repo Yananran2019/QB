@@ -1,0 +1,15 @@
+//CSS reset
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.my_small{
+  font-size:0.8rem;
+}
+a{
+  text-decoration:none;
+}
+input:focus{
+  outline:none;
+}

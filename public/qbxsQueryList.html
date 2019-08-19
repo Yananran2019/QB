@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/comm.css"/>
+    <link rel="stylesheet" href="../css/qbxsQueryList.css"/>
+</head>
+<body>
+<div class="container">
+    <!-- 线索查询-->
+    <div class="my_title_info">
+        <p>线索查询</p>
+    </div>
+    <!-- 查询区域-->
+    <fieldset>
+        <legend>查询条件</legend>
+        <div class="queryArea">
+            <span style="width:5%">上报时间:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+            <span style="width:2%;margin-left:2rem">至:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+            <span style="width:5%" class="ml-2">线索标题:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+            <span style="width:5%" class="ml-2">线索编号:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+        </div>
+        <div class="queryArea my-3">
+            <span style="width:5%">上报单位:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+            <span style="width:5%" class="ml-2">上报人:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+            <span style="width:5%" class="ml-2">线索类型:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+            <span style="width:5%" class="ml-2">线索来源:</span>
+            <input class="input-style" type="text" style="width:15%"/>
+        </div>
+    </fieldset>
+    <!-- 查询表格-->
+    <div id="queryXSData">
+        <table>
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>标题</th>
+                <th>线索类型</th>
+                <th>内容</th>
+                <th>线索来源</th>
+                <th>填报时间</th>
+                <th>填报部门</th>
+                <th>填报人</th>
+              </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<script src="../js/qbxs/qbxsQueryList.js"></script>
+</body>
+</html>

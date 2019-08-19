@@ -1,0 +1,85 @@
+/*首页header 包括logo和大标题*/
+.main-header{
+    display:block;
+    max-height:100px;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+.main-header .logo{
+    display: block;
+    width:230px;
+    height:70px;
+    background:#007d71;
+    padding: 0 15px;
+    border-bottom: 0 solid transparent;
+    float:left;
+    position: relative;
+}
+.main-header .logo img{
+    width:75px;
+    height:75px;
+    display: block;
+    position: absolute;
+    left:75px;
+}
+.navbar:before, .navbar:after{
+    content: "";
+    display: table;
+}
+/*侧边栏aside样式*/
+.aside ul>li{
+    width:200px;
+    margin-bottom: 2px;
+    background-color: #2a3f54;
+}
+.aside ul>li:hover{
+    background:rgba(42,63,84,.9);
+}
+.tree li>span{
+    display:inline-block;
+    width:200px;
+    height:50px;
+    cursor: pointer;
+    font-size:0.8rem;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+}
+li ul{
+    /* display: none; */
+    height: 0;
+    overflow:hidden;
+    transition:height .5s linear;
+}
+.tree ul>li{
+    height:40px;
+    background:#17a2b8;
+    margin-bottom:2px;
+    text-align:center;
+    line-height: 40px;
+}
+.tree ul>li>a{
+    font-size:0.5rem;
+    text-decoration:none;
+    color:#fff;
+}
+.tree ul>li:hover{
+    background: rgba(23,162,184,.9);
+}
+/* 二级菜单栏显示 */
+li:nth-child(1)>span.open+ul{
+    /* display: block; */
+    height:250px;
+}
+li:nth-child(2)>span.open+ul{
+    height:80px;
+}
+li:nth-child(4)>span.open+ul{
+    height:120px;
+}
+li:nth-child(5)>span.open+ul{
+    height:120px;
+}
+

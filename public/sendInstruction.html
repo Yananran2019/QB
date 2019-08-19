@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/comm.css"/>
+    <link rel="stylesheet" href="../css/qbxsEditFill.css"/>
+</head>
+<body>
+<div class="container">
+        <!-- 小标题栏-->
+        <div class="my_title_info">
+            <p>报部信息</p>
+        </div>
+        <div class="my_title_group_info">
+            <p>涉(案)事相关信息</p>
+        </div>
+        <!-- 上报内容信息-->
+        <div class="my_box">
+            <table cellpadding="15">
+                <tr>
+                    <td align="right" width="10%">线索标题:</td>
+                    <td width="90%">
+                        <input class="input-style" type="text" style="width:85%" id="BT" name="dataWrap.query.BT_LIKE" upload="true"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">信息正文:</td>
+                    <td width="90%">
+                        <input class="input-textarea_style" type="textarea" style="width:85%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="15%">*涉事类型(一级):</td>
+                    <td width="85%">
+                        <div style="width:75%;">
+                            <input type="checkbox" name="involved_type" value="zzsj" />政治事件
+                            <input type="checkbox" name="involved_type" value="blkbsj"/>暴力恐怖事件
+                            <input type="checkbox" name="involved_type" value="qtxsj"/>群体性事件
+                            <input type="checkbox" name="involved_type" value="zhxsj"/>综合性事件
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*涉事类型(二级):</td>
+                    <td width="90%">
+                        <input class="input-style" type="text" style="width:85%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*开始时间:</td>
+                    <td width="90%">
+                        <div style="width: 85%">
+                            <input class="input-style" type="text" style="width:42%"/>
+                            <span class="myWidth" style="width:10%;display: inline-block">*结束时间:</span>
+                            <input class="input-style" type="text" style="width:42%"/>
+
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*地点类型:</td>
+                    <td width="90%">
+                        <div class="input_marginR">
+                            <input type="radio" name="locationType" id="dzjg" value="dzjg"/><label for="dzjg">党政机关</label>
+                            <input type="radio" name="locationType" id="jtsn" value="jtsn"/><label for="jtsn">交通枢纽</label>
+                            <input type="radio" name="locationType" id="dxhdcs" value="dxhdcs"/><label for="dxhdcs">大型活动场所</label>
+                            <input type="radio" name="locationType" id="yhbw" value="yhbw"/><label for="yhbw">要害部位</label>
+                            <input type="radio" name="locationType" id="lyjq" value="lyjq"/><label for="lyjq">旅游景区</label>
+                            <input type="radio" name="locationType" id="qsydw" value="qsydw"/><label for="qsydw">企事业单位</label>
+                            <input type="radio" name="locationType" id="uni" value="uni"/><label for="uni">学校</label>
+                            <input type="radio" name="locationType" id="czmt" value="czmt"/><label for="czmt">车站码头</label>
+                            <input type="radio" name="locationType" id="jrjg" value="jrjg"/><label for="jrjg">金融机构</label>
+                            <input type="radio" name="locationType" id="cz" value="cz"/><label for="cz">城镇</label>
+                            <input type="radio" name="locationType" id="other" value="other"/><label for="other">其它</label>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*涉事主体:</td>
+                    <td width="90%">
+                        <div class="input_marginR">
+                            <input type="checkbox" name="involved_body" id="ffzjsl" value="ffzjsl" /><label for="ffzjsl">非法宗教势力</label>
+                            <input type="checkbox" name="involved_body" id="flgtt" value="flgtt"/><label for="flgtt">法轮功团体</label>
+                            <input type="checkbox" name="involved_body" id="qtxjtt" value="qtxjtt"/><label for="qtxjtt" >其他邪教团体</label>
+                            <input type="checkbox" name="involved_body" id="mzflzz" value="mzflzz"/><label for="mzflzz" >民族分裂组织</label>
+                            <input type="checkbox" name="involved_body" id="fzfzz" value="fzfzz"/><label for="fzfzz" >非政府组织</label>
+                            <input type="checkbox" name="involved_body" id="jgqsyry" value="jgqsyry"/><label for="jgqsyry" >机关企事业人员</label>
+                            <input type="checkbox" name="involved_body" id="xgsyry" value="xgsyry"/><label for="xgsyry" >下岗失业人员</label>
+                            <input type="checkbox" name="involved_body" id="ltxry" value="ltxry"/><label for="ltxry" >离退休人员</label>
+                            <input type="checkbox" name="involved_body" value="nm" id="nm"/><label for="nm" class="involved_body">农民</label>
+                            <input type="checkbox" name="involved_body" value="gtgsz"/>个体工商者
+                            <input type="checkbox" name="involved_body" value="jsxs"/>教师学生
+                            <input type="checkbox" name="involved_body" value="jwry"/>境外人员
+                            <input type="checkbox" name="involved_body" value="fzjr"/>复转军人
+                            <input type="checkbox" name="involved_body" value="fzqk"/>有犯罪前科人员
+                            <input type="checkbox" name="involved_body" value="other"/>其他
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*涉事人数:</td>
+                    <td width="90%">
+                        <div class="input_marginR">
+                            <input type="radio" name="involved_person" id="twenty" value="twenty"/><label for="twenty">20人以下</label>
+                            <input type="radio" name="involved_person" id="twenty-hundred" value="twenty-hundred"/><label for="twenty-hundred">20-100人</label>
+                            <input type="radio" name="involved_person" id="hundred-fiveH" value="hundred-fiveH"/><label for="hundred-fiveH">100-500人</label>
+                            <input type="radio" name="involved_person" id="fiveHundred" value="fiveHundred"/><label for="fiveHundred">500人以上</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*涉事损失:</td>
+                    <td width="90%">
+                        <div class="input_marginR">
+                            <input type="radio" name="involved_loss" id="h_thousand" value="h_thousand"/><label for="h_thousand">100万以下</label>
+                            <input type="radio" name="involved_loss" id="fiveH_thousand" value="fiveH_thousand"/><label for="fiveH_thousand">100-500万</label>
+                            <input type="radio" name="involved_loss" id="twentyH_thousand" value="twentyH_thousand"/><label for="twentyH_thousand">500-2000万</label>
+                            <input type="radio" name="involved_loss" id="h_million" value="h_million"/><label for="h_million">2000万-1亿</label>
+                            <input type="radio" name="involved_loss" id="million_above" value="million_above"/><label for="million_above">1亿以上</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*涉事诱因:</td>
+                    <td width="90%">
+                        <div class="input_marginR">
+                            <input type="checkbox" name="involved_trigger" id="gjmd" value="gjmd" /><label for="gjmd">国家矛盾</label>
+                            <input type="checkbox" name="involved_trigger" id="zjmd" value="zjmd" /><label for="zjmd">宗教矛盾</label>
+                            <input type="checkbox" name="involved_trigger" id="ffzz" value="ffzz" /><label for="ffzz">非法组织</label>
+                            <input type="checkbox" name="involved_trigger" id="zfwt" value="zfwt" /><label for="zfwt">执法问题</label>
+                            <input type="checkbox" name="involved_trigger" id="gyfb" value="gyfb" /><label for="gyfb">官员腐败</label>
+                            <input type="checkbox" name="involved_trigger" id="glzy" value="glzy" /><label for="glzy">官僚主义</label>
+                            <input type="checkbox" name="involved_trigger" id="qygzphjc" value="qygzphjc" /><label for="qygzphjc">企业改制破坏兼产</label>
+                            <input type="checkbox" name="involved_trigger" id="gzfldy" value="gzfldy" /><label for="gzfldy">工资福利待遇</label>
+                            <input type="checkbox" name="involved_trigger" id="jzwt" value="jzwt" /><label for="jzwt">集资问题</label>
+                            <input type="checkbox" name="involved_trigger" id="jywt" value="jywt" /><label for="jywt">就业问题</label>
+                            <input type="checkbox" name="involved_trigger" id="gpwt" value="gpwt" /><label for="gpwt">股票问题</label>
+                            <input type="checkbox" name="involved_trigger" id="hjwr" value="hjwr" /><label for="hjwr">环境污染</label>
+                            <input type="checkbox" name="involved_trigger" id="zdbq" value="zdbq" /><label for="zdbq">征地搬迁</label>
+                            <input type="checkbox" name="involved_trigger" id="ysgljf" value="ysgljf" /><label for="ysgljf">运输管理纠纷</label>
+                            <input type="checkbox" name="involved_trigger" id="yhjf" value="yhjf" /><label for="yhjf">医患纠纷</label>
+                            <input type="checkbox" name="involved_trigger" id="jtjf" value="jtjf" /><label for="jtjf">交通纠纷</label>
+                            <input type="checkbox" name="involved_trigger" id="mjjf" value="mjjf" /><label for="mjjf">民间纠纷</label>
+                            <input type="checkbox" name="involved_trigger" id="xxgljf" value="xxgljf" /><label for="xxgljf">学校管理纠纷</label>
+                            <input type="checkbox" name="involved_trigger" id="snwt" value="snwt" /><label for="snwt">三农问题</label>
+                            <input type="checkbox" name="involved_trigger" id="ncwt" value="ncwt"/><label for="ncwt">农村问题</label>
+                            <input type="checkbox" name="involved_trigger" id="zklscctd" value="zklscctd"/><label for="zklscctd">征矿林水草场土地</label>
+                            <input type="checkbox" name="involved_trigger" id="ymwt" value="ymwt" /><label for="ymwt">移民问题</label>
+                            <input type="checkbox" name="involved_trigger" id="qt" value="qt"/><label for="qt">其它</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*表现形式:</td>
+                    <td width="90%">
+                        <div class="input_marginR">
+                            <input type="checkbox" name="pattern_of_manifestation" value="sf" id="sf"/><label for="sf">上访</label>
+                            <input type="checkbox"name="pattern_of_manifestation" value="jjsf" id="jjsf"/>
+                            <label for="jjsf">进京上访</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="qy" id="qy"/><label for="qy">请愿</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="jz" id="jz"/><label for="jz">静坐</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="cjdzjg" id="cjdzjg"/><label
+                                for="cjdzjg">冲击党政机关</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="wdyhbm" id="wdyhbm"/><label for="wdyhbm">围堵要害部门</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="jzzajt" id="jzzajt"/><label for="jzzajt">聚众阻碍交通</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="jzzs" id="jzzs"/><label for="jzzs">聚众滋事</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="cljh" id="cljh"/><label for="cljh">串联聚会</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="ffyx" id="ffyx"/><label for="ffyx">非法游行</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="ffsw" id="ffsw"/><label for="ffsw">非法示威</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="bg" id="bg"/><label for="bg">罢工</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="bk" id="bk"/><label for="bk">罢课</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="jzxd" id="jzxd"/><label for="jzxd">聚众械斗</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="jzhq" id="jzhq"/><label for="jzhq">聚众哄抢</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="dzqs" id="dzqs"/><label for="dzqs">打砸抢烧</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="sl" id="sl"/><label for="sl">骚乱</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="sqsb" id="sqsb"/><label for="sqsb">涉枪涉爆</label>
+                            <input type="checkbox" name="pattern_of_manifestation" value="qt" id="pattern_qt"/><label for="pattern_qt">其它</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 涉事骨干-->
+        <div class="my_title_group_info">
+            <p>涉事骨干</p>
+        </div>
+        <div class="my_box">
+            <div class="ml-4">
+                <button>关联</button>
+                <button>添加</button>
+                <button>查询</button>
+                <button>删除</button>
+            </div>
+            <div class="ml-4 mb-2">
+                <table class="table-bordered w-75">
+                    <tr>
+                        <td>姓名</td>
+                        <td>身份证号</td>
+                        <td>性别</td>
+                        <td>户籍</td>
+                        <td>居住地</td>
+                    </tr>
+                    <tr>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 情报信息评估-->
+        <div class="my_title_group_info">
+            <p>情报信息评估</p>
+        </div>
+        <div class="my_box">
+            <table  cellpadding="15">
+                <tr>
+                    <td align="right" width="10%">*危险度:</td>
+                    <td width="80%">
+                        <input  type="radio" name="danger_degree"/>非常危险(1.4.14)
+                        <input  type="radio" name="danger_degree"/>危险(1)
+                        <input  type="radio" name="danger_degree"/>不危险(0.717)
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*紧急度:</td>
+                    <td width="80%">
+                        <input  type="radio" name="urgency_degree"/>非常紧急(1.4.14)
+                        <input  type="radio" name="urgency_degree"/>紧急(1)
+                        <input  type="radio" name="urgency_degree"/>不紧急(0.717)
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="15%">*紧急程度(部要求):</td>
+                    <td width="75%">
+                        <input  type="radio" name="urgency_degree_public"/>一般
+                        <input  type="radio" name="urgency_degree_public"/>重要
+                        <input  type="radio" name="urgency_degree_public"/>紧急
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="15%">*发生状态(部要求):</td>
+                    <td width="75%">
+                        <input  type="radio" name="any_state"/>未发生
+                        <input  type="radio" name="any_state"/>已发生
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">*级别评定:</td>
+                    <td width="80%">
+                        <input  type="radio" name="level"/>一级
+                        <input  type="radio" name="level"/>二级
+                        <input  type="radio" name="level"/>三级
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="10%">评估意见:</td>
+                    <td width="80%">
+                        <input class="input-textarea_style" type="textarea" style="width:80%"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--提交返回按钮 -->
+        <div class="mt-3 text-center">
+            <button class="mr-2">确认</button>
+            <button>返回</button>
+        </div>
+    </div>
+</body>
+</html>

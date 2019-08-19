@@ -1,0 +1,115 @@
+/*外部container基本样式*/
+.container{
+    width: 1000px;
+    margin:0 auto;
+}
+/*标题栏信息基本样式*/
+.my_title_info{
+    width:100%;
+    height:30px;
+    background-color: #2a3f54;
+    color:#fff;
+    font-size:1rem;
+    line-height:30px;
+    border-radius: 0.2rem;
+}
+p{
+    margin-left: 1rem !important;;
+}
+/*标题栏分组--每个小横条标题样式*/
+.my_title_group_info{
+    width:100%;
+    height:30px;
+    background-color:#117a8b;
+    color:#000;
+    font-size:1rem;
+    margin-top:15px;
+    line-height:30px;
+    border-radius: 0.2rem;
+}
+/*fieldset样式重写*/
+fieldset{
+    width: 100%;
+    padding: .35em .625em .75em;
+    margin:5px auto;
+    border: 1px solid #17a2b8 !important;
+    border-radius: 0.5rem;
+}
+legend{
+    padding: .5em;
+    border: 0;
+    width: auto;
+    font-size:1rem;
+    color:#17a2b8;
+    font-weight:bold;
+}
+/*填报内容信息*/
+.my_box{
+    margin:5px auto;
+    width: 100%;
+    border: 1px solid #17a2b8 !important;
+    border-radius: 0.5rem;
+}
+/*input-text样式*/
+.input-style{
+    height: 26px;
+    border: 1px solid rgb(211, 218, 229);
+    padding-left:10px;
+}
+.input_marginR{
+    width:90%;
+}
+/*每个input>label距离右边边距*/
+.input_marginR>label{
+    margin-right: 10px;
+}
+/*input-textarea样式*/
+.input-textarea_style{
+    height: 150px;
+    border: 1px solid rgb(211, 218, 229);
+    padding-left:10px;
+}
+.myWidth{
+    margin-left:2rem;
+}
+/*表格中字体大小颜色*/
+table tr td{
+    font-size:0.8rem;
+    color:#6c757d;
+}
+.my_smallBox{
+    margin-top:20px;
+    margin-left:50px;
+}
+.my_smallBox h6{
+    display:inline !important;
+    color:#6c757d;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    text-align:right;
+}
+/*群体类别*/
+.group_types{
+    font-size:0.8rem;
+    color:#6c757d;
+    padding-left:15px;
+}
+/*群体类别下拉框样式*/
+select{
+    height: 26px;
+    border: 1px solid rgb(211, 218, 229) !important;
+    margin-left:1.5rem;
+    margin-bottom:15px;
+}
+/*关联信息按钮样式*/
+.my_btn_width{
+    width:60px;
+    height:30px;
+    font-size:0.8rem;
+}
+/*线索标签中的文本去除上内边距*/
+.myPadding{
+    padding-top:5px;
+}
+
+

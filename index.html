@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <!--侧边栏-->
+    <div class="aside">
+    <ul class="tree">
+        <li>
+            <span class="open">代办</span>
+            <ul>
+                <li><a href="">公安部流转指令</a></li>
+                <li><a href="">地市反馈指令</a></li>
+                <li><a href="">地市反馈线索</a></li>
+                <li><a href="">本日行动性线索</a></li>
+                <li><a href="">本日综合研判</a></li>
+                <li><a href="">本日专题约稿</a></li>
+            </ul>
+        </li>
+        <li>
+            <span>行动性线索</span>
+            <ul>
+                <li><a href="">省内线索</a></li>
+                <li><a href="">省外线索</a></li>
+            </ul>
+        </li>
+        <li>
+            <span>综合研判</span>
+        </li>
+        <li>
+            <span>专题研判</span>
+            <ul>
+                <li><a href="">专题约稿</a></li>
+                <li><a href="">专题定制</a></li>
+                <li><a href="">热点聚类</a></li>
+            </ul>
+        </li>
+        <li>
+            <span>线索采编</span>
+            <ul>
+                <li><a href="">线索上报</a></li>
+                <li><a href="">线索查询</a></li>
+                <li><a href="">线索暂存</a></li>
+            </ul>
+        </li>
+        <li><span>收藏夹</span>
+        </li>
+        <li><span>情报信息库</span>
+        </li>
+    </ul>
+    </div>
+    <script>
+        //要求：同一时刻，只能有一个菜单是打开的
+        //DOM4步：
+        //1.查找触发事件的元素
+        //查找ul下所有span
+        //查找class为tree的ul内的所有span
+        var spans=document.querySelectorAll("ul.tree>li>span");
+        //2.绑定事件处理函数
+        //遍历每个span，为每个span添加单击事件处理函数
+        for(var span of spans){
+            span.onclick=function(){
+                var span=this;//获得当前span
+                //3.查找要修改的元素
+                //获得ul.tree下开着的span
+                var openSpan=document.querySelector("ul.tree>li>span.open");
+                //如果当前span是开着的
+                if(span.className=="open"){
+                    //4.修改元素
+                    //就关闭当前span即可！
+                    span.className="";
+                }else{//否则，(如果当前span是关着的)
+                    if(openSpan!=null){ //如果找到了其它的span有开着的
+                        openSpan.className=""; //就先关闭开着的openSpan
+                    }
+                    //最后无论其它是否有开着的，都要把自己打开！
+                    span.className="open";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
